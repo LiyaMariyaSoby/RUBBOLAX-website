@@ -1,0 +1,10 @@
+RUBBOLUX RTMS WEBSITE — BLENDED HERO BUILD
+
+1. Extract this ZIP into a new folder.
+2. Open RTMS_Website/index.html in your browser (or use VS Code Live Server).
+3. If you have the old page open, use Ctrl+F5 to refresh.
+
+This build keeps the approved hero photo as an unchanged PNG at its native
+1021 x 819 pixel size on desktop. The soft green-to-photo blend is created
+only by a CSS gradient overlay; the photo is not blurred, resized, sharpened,
+or recompressed.
