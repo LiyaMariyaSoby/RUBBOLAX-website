@@ -249,7 +249,7 @@ body.dialog-open{overflow:hidden}
 }
 
 
-/* FINAL HERO FIX — native-pixel crop from the user's approved 1721x914 preview.
+/* FINAL HERO FIX â€” native-pixel crop from the user's approved 1721x914 preview.
    Desktop uses the 1021x819 image at its intrinsic pixel size: no cover-cropping,
    no stretching, no CSS transform, and no filter. */
 .hero{
@@ -289,7 +289,7 @@ body.dialog-open{overflow:hidden}
 }
 
 
-/* FINAL DESKTOP HERO ALIGNMENT — match approved preview without reducing photo resolution.
+/* FINAL DESKTOP HERO ALIGNMENT â€” match approved preview without reducing photo resolution.
    The image remains the original lossless PNG at its native 1021 x 819 pixels.
    Text is constrained to the green column so it never crosses into the photograph. */
 @media (min-width: 901px) {
@@ -379,7 +379,7 @@ body.dialog-open{overflow:hidden}
   .hero-content>p { max-width: 100% !important; font-size: 14px !important; }
 }
 
-/* FINAL BLEND REFINEMENT — gradient overlay only. The approved PNG photo
+/* FINAL BLEND REFINEMENT â€” gradient overlay only. The approved PNG photo
    remains byte-for-byte unchanged at its native 1021x819 desktop size. */
 @media (min-width: 901px) {
   .hero .hero-image {
@@ -439,5 +439,66 @@ body.dialog-open{overflow:hidden}
     background: linear-gradient(180deg,
       #0f2903 0%, #0f2903 40%,
       rgba(15,41,3,.92) 53%, rgba(15,41,3,.25) 75%, transparent 100%) !important;
+  }
+}
+
+/* FINAL MOBILE HERO FIX */
+@media (max-width: 650px) {
+
+  .hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 0 !important;
+    align-items: flex-start !important;
+    overflow: hidden !important;
+  }
+
+  .hero .hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 45px 7vw 35px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 10vw, 48px) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -2px !important;
+    margin: 22px 0 !important;
+  }
+
+  .hero-content > p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  .hero .hero-image {
+    background-size: 100% auto !important;
+    background-position: center bottom !important;
+  }
+
+  .hero .hero-shade {
+    width: 100% !important;
+    background: linear-gradient(
+      180deg,
+      #0f2903 0%,
+      #0f2903 40%,
+      rgba(15, 41, 3, .85) 65%,
+      rgba(15, 41, 3, .15) 100%
+    ) !important;
+  }
+
+  .hero-actions {
+    margin-top: 25px !important;
+    gap: 18px !important;
+  }
+
+  .hero-proof {
+    margin-top: 35px !important;
+  }
+
+  .hero-side-note {
+    display: none !important;
   }
 }
